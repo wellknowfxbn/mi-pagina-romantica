@@ -7,7 +7,7 @@
 <style>
 body {
     margin: 0;
-    overflow: hidden;
+    padding: 0;
     background: #ffeef2;
     font-family: 'Arial', sans-serif;
     text-align: center;
@@ -37,10 +37,13 @@ h1 {
 }
 
 canvas {
-    position: absolute;
+    position: fixed; /* fijo detrás */
     top: 0;
     left: 0;
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* no bloquea scroll ni clics */
+    z-index: -1; /* detrás de todo */
 }
 
 .playlist {
